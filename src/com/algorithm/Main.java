@@ -28,7 +28,6 @@ public class Main {
     public static void main(String[] args) {
         List<? extends B> list = new ArrayList<>();
         List<A> l = (List<A>) list;
-
         List<A> s = new ArrayList<>();
         s.add(new A());
         List<? extends B> lis = s;
