@@ -109,6 +109,7 @@ import java.util.*;
          }
          return ret;
      }
+
      class Pair {
          int index;
          double value;
