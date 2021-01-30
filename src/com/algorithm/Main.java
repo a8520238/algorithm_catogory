@@ -24,6 +24,7 @@ class Generic {
         System.out.println("ok");
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         List<? extends B> list = new ArrayList<>();
