@@ -8,31 +8,43 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
-class B {
-    public void test() {
-        System.out.println("okB");
-    }
-}
-class A extends B {
-    public void test() {
-        System.out.println("okA");
-    }
-}
-class Generic {
-    public void test(List<B> list) {
-        B s = (B) list.get(0);
-        System.out.println("ok");
-    }
-}
+//class B {
+//    public void test() {
+//        System.out.println("okB");
+//    }
+//}
+//class A extends B {
+//    public void test() {
+//        System.out.println("okA");
+//    }
+//}
+//class Generic {
+//    public void test(List<B> list) {
+//        B s = (B) list.get(0);
+//        System.out.println("ok");
+//    }
+//}
 
 public class Main {
     public static void main(String[] args) {
-        List<? extends B> list = new ArrayList<>();
-        List<A> l = (List<A>) list;
-        List<A> s = new ArrayList<>();
-        s.add(new A());
-        List<? extends B> lis = s;
-        s.get(0).test();
+        int a = Integer.MIN_VALUE;
+        System.out.println(Math.abs(a));
+//        Integer[] test = new Integer[]{-2147483648,-2147483648,2147483647,-2147483648,1,3};
+//        Arrays.sort(test);
+//        List<Integer> list = Arrays.asList(test);
+        int[] nums = new int[] {-2147483648,-2147483648,2147483647,-2147483648,1,3};
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            list.add(i);
+        }
+        System.out.println(list);
+//        System.out.println(Arrays.toString(test));
+//        List<? extends B> list = new ArrayList<>();
+//        List<A> l = (List<A>) list;
+//        List<A> s = new ArrayList<>();
+//        s.add(new A());
+//        List<? extends B> lis = s;
+//        s.get(0).test();
 //        Object[] o = new Object[10];
 ////        o[0] = 2;
 //        String[] s = (String[])o;
